@@ -13,13 +13,18 @@ class Hero:
         def takeDamage(self, damage):
             self.health = max(0, self.health - damage)
             print(f"{self.name} takes {damage} damage. Health: {self.health}")
+            return takeDamage
 
         def isAlive(self):
-            return self.health > 0
+            if self.health > 0:
+                return True
+            else:
+                return False
 
         def crit(self, attack):
             if self.crit == 1:
                 self.attack = self.attack * 2
+            return crit
 
             
 

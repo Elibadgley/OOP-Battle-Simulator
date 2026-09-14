@@ -23,6 +23,10 @@ def main():
     
     print(f"{goblinTwo.name} enters the arena with {goblinTwo.health} health.")
 
+    heroAttack = hero.attack()
+    goblin.take_damage(heroAttack)
+
+
 
 
 if __name__ == "__main__":

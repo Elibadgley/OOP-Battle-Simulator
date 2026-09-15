@@ -8,12 +8,6 @@ class Hero:
         self.crit = random.randint(0,100)
 
         def attack(self, crit):
-            def crit(self, attack):
-                    if self.crit == 1:
-                        self.attack = self.attack * 2
-                    else:
-                        self.attack = self.attack * 1
-                    return crit
             return attack
 
         def takeDamage(self, damage):

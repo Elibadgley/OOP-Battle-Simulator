@@ -15,17 +15,16 @@ def main():
     print(f"Hero {hero.name} has answered the call and will save this world!")
     print(f"{hero.name} enters the arena with {hero.health} health.")
 
-    goblin = Goblin("Edward Longshanks")
+    goblin = Goblin("Edward Longshanks I")
 
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
 
-    goblinTwo = Goblin("Edward Longshanks")
+    goblinTwo = Goblin("Edward Longshanks II")
     
     print(f"{goblinTwo.name} enters the arena with {goblinTwo.health} health.")
 
-    heroAttack = hero.attack()
+    heroAttack = hero.attack
     goblin.take_damage(heroAttack)
-
 
 
 

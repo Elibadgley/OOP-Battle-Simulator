@@ -4,14 +4,14 @@ class Hero:
     def __init__(self, name):
         self.name = name
         self.health = 120
-        self.attack = random.randint(1, 12)
+        self.attack_power = random.randint(1, 12)
         self.crit = random.randint(1, 12)
 
     def attack(self, crit):
-        if self.attack == 12:
-            self.attack += self.crit
-            print(self.attack)
-        return self.attack
+        if self.attack_power == 12:
+            return self.attack_power + self.crit
+        else:
+            return self.attack_power
 
     def takeDamage(self, damage):
         self.health = max(0, self.health - damage)

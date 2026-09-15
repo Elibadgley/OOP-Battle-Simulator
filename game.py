@@ -1,5 +1,6 @@
 from goblin import Goblin
 from hero import Hero
+import random
 
 
 ARENA_NAME = "The Colosseum"
@@ -23,8 +24,10 @@ def main():
     
     print(f"{goblinTwo.name} enters the arena with {goblinTwo.health} health.")
 
-    heroAttack = hero.crit
+    heroAttack = hero.attack(random.randint(1,12))
     goblin.take_damage(heroAttack)
+    if heroAttack > 12:
+        print("CRIT")
 
 
 

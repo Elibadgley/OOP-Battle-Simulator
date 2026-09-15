@@ -8,8 +8,10 @@ class Hero:
         self.crit = random.randint(1, 12)
 
     def attack(self):
-        if self.attack_power >= 11:
-            return self.attack_power + self.crit
+        doesCrit =  random.randint(1, 20) == 20
+        attack = random.randint(1, self.attack_power)
+        if doesCrit:
+            return attack + self.crit
         else:
             return self.attack_power
 

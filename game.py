@@ -29,14 +29,11 @@ def main():
     print(f"{goblinTwo.name} enters the arena with {goblinTwo.health} health.")
 
  #The Hero attacks a goblin
-    heroAttack = hero.attack(random.randint(1,12))
+    heroAttack = hero.attack()
     goblin.take_damage(heroAttack)
     if heroAttack > 12:
         print("CRIT")
 
-#The gobiln  attacks the hero
-    goblinAttack = goblin.attack()
-    hero.take_damage(goblinAttack)
 
 
 

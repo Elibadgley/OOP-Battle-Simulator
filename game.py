@@ -23,7 +23,7 @@ def main():
     
     print(f"{goblinTwo.name} enters the arena with {goblinTwo.health} health.")
 
-    heroAttack = hero.attack
+    heroAttack = hero.crit
     goblin.take_damage(heroAttack)
 
 

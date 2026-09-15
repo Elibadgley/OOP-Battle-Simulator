@@ -8,12 +8,12 @@ class Hero:
         self.crit = random.randint(1, 12)
 
     def attack(self):
-        doesCrit =  random.randint(1, 20) == 20
-        attack = random.randint(1, self.attack_power)
-        if doesCrit:
-            return attack + self.crit
+        doesCrit =  random.randint(1, 20)
+        if doesCrit == 20 or doesCrit == 19:
+            print("CRITICAL HIT")
+            return random.randint(1, self.attack_power) + self.crit
         else:
-            return self.attack_power
+            return random.randint(1, self.attack_power)
 
     def take_damage(self, damage):
         self.health = max(0, self.health - damage)

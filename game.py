@@ -8,8 +8,6 @@ ARENA_NAME = "The Colosseum"
 def battle(hero: Hero, enemy: Goblin):
     while hero.is_alive() and enemy.is_alive():
         hero_damage = hero.attack()
-        if hero_damage > 12:
-            print("CRIT")
         enemy.take_damage(hero_damage)
 
         if enemy.is_alive():

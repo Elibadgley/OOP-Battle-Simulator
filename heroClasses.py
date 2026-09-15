@@ -5,23 +5,6 @@ class Warrior:
     def __init__(self, name):
         self.name = name
         self.health = 200
-<<<<<<< Updated upstream
-        self.attack_power = random.randint(1, 12)
-        self.crit = random.randint(1, 12)
-
-    def attack(self):
-        if self.attack_power >= 11:
-            return self.attack_power + self.crit
-        else:
-            return self.attack_power
-
-    def take_damage(self, damage):
-        self.health = max(0, self.health - damage)
-        print(f"{self.name} takes {damage} damage. Health: {self.health}")
-        
-
-    def isAlive(self):
-=======
         self.attack_power = 12
         self.crit = random.randint(1, 12)
 
@@ -39,7 +22,6 @@ class Warrior:
         print(f"{self.name} takes {damage / 2} damage. Health: {self.health}")
 
     def is_alive(self):
->>>>>>> Stashed changes
         if self.health > 0:
             return True
         else:
@@ -47,9 +29,6 @@ class Warrior:
 
 
 class Sorcerer:
-<<<<<<< Updated upstream
-    pass
-=======
     def __init__(self, name):
         self.name = name
         self.health = 120
@@ -74,7 +53,6 @@ class Sorcerer:
             return True
         else:
             return False
->>>>>>> Stashed changes
 
 class Rogue:
     pass

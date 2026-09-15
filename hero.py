@@ -18,7 +18,7 @@ class Hero:
         print(f"{self.name} takes {damage} damage. Health: {self.health}")
         
 
-    def isAlive(self):
+    def is_alive(self):
         if self.health > 0:
             return True
         else:

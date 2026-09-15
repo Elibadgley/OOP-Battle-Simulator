@@ -5,7 +5,23 @@ import random
 
 ARENA_NAME = "The Colosseum"
 
+def battle(hero: Hero, enemy: Goblin):
+    while hero.is_alive() and enemy.is_alive():
+        hero_damage = hero.attack()
+        if hero_damage > 12:
+            print("CRIT")
+        enemy.take_damage(hero_damage)
 
+        if enemy.is_alive():
+            enemy_damage = enemy.attack()
+            hero.take_damage(enemy_damage)
+        print(" ")
+    if hero.is_alive():
+        print(f"{hero.name} wins!")
+    else:
+        print(f"{enemy.name} wins!")
+
+        
 def main():
 #creating the arena
     """Open the arena and introduce its first opponent."""
@@ -19,20 +35,17 @@ def main():
     print(f"{hero.name} enters the arena with {hero.health} health.")
 
 #Creating the First Goblin
-    goblin = Goblin("Edward Longshanks I")
+    goblin = Goblin("Goblin I")
 
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
 
 #creating the second Goblin
-    goblinTwo = Goblin("Edward Longshanks II")
+    goblinTwo = Goblin("Goblin II")
     
     print(f"{goblinTwo.name} enters the arena with {goblinTwo.health} health.")
 
- #The Hero attacks a goblin
-    heroAttack = hero.attack()
-    goblin.take_damage(heroAttack)
-    if heroAttack > 12:
-        print("CRIT")
+#permanent funtion for battle
+    battle(hero, goblin)
 
 
 

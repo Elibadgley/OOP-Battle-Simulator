@@ -8,12 +8,12 @@ class Hero:
         self.crit = random.randint(1, 12)
 
     def attack(self, crit):
-        if self.attack_power == 12:
+        if self.attack_power >= 11:
             return self.attack_power + self.crit
         else:
             return self.attack_power
 
-    def takeDamage(self, damage):
+    def take_damage(self, damage):
         self.health = max(0, self.health - damage)
         print(f"{self.name} takes {damage} damage. Health: {self.health}")
         

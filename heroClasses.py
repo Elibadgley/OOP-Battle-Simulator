@@ -5,23 +5,6 @@ class Warrior:
     def __init__(self, name):
         self.name = name
         self.health = 200
-<<<<<<< Updated upstream
-        self.attack_power = random.randint(1, 12)
-        self.crit = random.randint(1, 12)
-
-    def attack(self):
-        if self.attack_power >= 11:
-            return self.attack_power + self.crit
-        else:
-            return self.attack_power
-
-    def take_damage(self, damage):
-        self.health = max(0, self.health - damage)
-        print(f"{self.name} takes {damage} damage. Health: {self.health}")
-        
-
-    def isAlive(self):
-=======
         self.attack_power = 12
         self.crit = random.randint(1, 12)
 
@@ -39,45 +22,45 @@ class Warrior:
         print(f"{self.name} takes {damage / 2} damage. Health: {self.health}")
 
     def is_alive(self):
->>>>>>> Stashed changes
         if self.health > 0:
             return True
         else:
             return False
 
-
-class Sorcerer:
-<<<<<<< Updated upstream
-    pass
-=======
+class Rogue:
     def __init__(self, name):
         self.name = name
-        self.health = 120
-        self.attack_power = 12
-        self.crit = random.randint(1, 12)
-    
+        self.health = 80
+        self.attack_power = 30
+        self.crit = random.randint(1, self.attack_power)
+        
+    def sneak_attack(self):
+        doesCrit =  random.randint(1, 20)
+        if doesCrit > 12:
+            print("CRITICAL HIT")
+            return random.randint(1, self.attack_power) + self.crit + 40
+        else:
+            return random.randint(1, self.attack_power)
+
     def attack(self):
         doesCrit =  random.randint(1, 20)
         if doesCrit == 20:
             print("CRITICAL HIT")
-            return random.randint(1, self.attack_power) + self.crit
+            return random.randint(1, self.attack_power) + self.crit - 40
         else:
-            return random.randint(1, self.attack_power)
-    
+            return random.randint(1, self.attack_power - 20)
+
+        
     def take_damage(self, damage):
         self.health = max(0, self.health - damage)
         print(f"{self.name} takes {damage} damage. Health: {self.health}")
-            
-    
+                
+        
     def is_alive(self):
         if self.health > 0:
             return True
         else:
             return False
->>>>>>> Stashed changes
-
-class Rogue:
-    pass
 
 class Ranger:
     pass

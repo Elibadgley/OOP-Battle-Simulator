@@ -27,6 +27,7 @@ class Warrior:
         else:
             return False
 
+
 class Rogue:
     def __init__(self, name):
         self.name = name

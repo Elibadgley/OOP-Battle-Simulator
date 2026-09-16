@@ -9,13 +9,12 @@ class Warrior:
         self.crit = random.randint(1, 12)
 
     def attack(self):
-        for i in range(2):
-            doesCrit =  random.randint(1, 20)
-            if doesCrit == 20 or doesCrit == 19:
-                print("CRITICAL HIT")
-                return random.randint(1, self.attack_power) + self.crit + i
-            else:
-                return random.randint(1, self.attack_power) + i
+        doesCrit =  random.randint(1, 20)
+        if doesCrit == 20 or doesCrit == 19:
+            print("CRITICAL HIT")
+            return random.randint(1, self.attack_power) + self.crit
+        else:
+            return random.randint(1, self.attack_power)
 
     def take_damage(self, damage):
         self.health = max(0, (self.health - (damage / 2)))

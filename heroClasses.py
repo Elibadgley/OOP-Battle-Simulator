@@ -18,7 +18,7 @@ class Warrior:
                 return random.randint(1, self.attack_power) + i
 
     def take_damage(self, damage):
-        self.health = max(0, (self.health - damage) / 2)
+        self.health = max(0, (self.health - (damage / 2)))
         print(f"{self.name} takes {damage / 2} damage. Health: {self.health}")
 
     def is_alive(self):

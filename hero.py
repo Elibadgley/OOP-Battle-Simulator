@@ -1,7 +1,7 @@
 import random
 
 class Hero:
-    def __init__(self, name):
+    def __init__(self, name, type):
         self.name = name
         self.health = 120
         self.attack_power = random.randint(1, 12)

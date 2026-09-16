@@ -1,6 +1,6 @@
 from goblin import Goblin
 from hero import Hero
-import random
+from heroClasses import Warrior, Rogue, Ranger
 
 
 ARENA_NAME = "The Colosseum"
@@ -28,7 +28,7 @@ def main():
     print("The gates are opening...")
 
 #Creating first hero
-    hero = Hero("Mel Gibson")
+    hero = Warrior("Mel Gibson")
     print(f"Hero {hero.name} has answered the call and will save this world!")
     print(f"{hero.name} enters the arena with {hero.health} health.")
 

@@ -28,11 +28,7 @@ class Warrior:
             return False
 
 
-<<<<<<< HEAD
-class Sorcerer:
-=======
 class Rogue:
->>>>>>> HeroClasses
     def __init__(self, name):
         self.name = name
         self.health = 80
@@ -66,12 +62,6 @@ class Rogue:
             return True
         else:
             return False
-<<<<<<< HEAD
-
-class Rogue:
-    pass
-=======
->>>>>>> HeroClasses
 
 class Ranger:
     pass

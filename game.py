@@ -6,7 +6,7 @@ from heroClasses import Warrior, Rogue, Ranger
 ARENA_NAME = "The Colosseum"
 
 def hero_interface(hero: Hero):
-    print(f"{hero.name} Interface:")
+    print(f"{hero.name}'s Interface:")
     print(" ")
     print(f"Attack Power: {hero.attack_power} ")
     print(f"Max Health: {hero.health}")
@@ -19,6 +19,13 @@ def battle(hero: Hero, enemy: Goblin):
         if type(hero) is Warrior:
             hero_damage = hero.attack()
             enemy.take_damage(hero_damage)
+        if type(hero) is Rogue:
+            if hero.health >= 70:
+                hero_damage = hero.sneak_attack()
+                enemy.take_damage(hero_damage)
+            else:
+                hero_damage = hero.attack()
+                enemy.take_damage(hero_damage)
 
         if enemy.is_alive():
             enemy_damage = enemy.attack()
@@ -32,7 +39,7 @@ def battle(hero: Hero, enemy: Goblin):
         
 def main():
 #Creating monsters
-    hero = Warrior("Mel Gibson")
+    hero = Rogue("Mel Gibson")
     goblin = Goblin("Goblin I")
     goblinTwo = Goblin("Goblin II")
 
@@ -52,6 +59,7 @@ def main():
 
     elif userInput.lower() == "n":
         hero_interface(hero)
+        userInput = input("Would you like to battle? (y/n)")
 
 
 if __name__ == "__main__":

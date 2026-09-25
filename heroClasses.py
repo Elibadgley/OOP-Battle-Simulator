@@ -30,25 +30,25 @@ class Warrior:
 class Rogue:
     def __init__(self, name):
         self.name = name
-        self.health = 80
-        self.attack_power = 30
+        self.health = 90
+        self.attack_power = 10
         self.crit = random.randint(1, self.attack_power)
         
     def sneak_attack(self):
         doesCrit =  random.randint(1, 20)
         if doesCrit > 12:
             print("CRITICAL HIT")
-            return random.randint(1, self.attack_power) + self.crit + 40
+            return random.randint(1, self.attack_power + 20) + self.crit + 20
         else:
-            return random.randint(1, self.attack_power)
+            return random.randint(1, self.attack_power + 20)
 
     def attack(self):
         doesCrit =  random.randint(1, 20)
         if doesCrit == 20:
             print("CRITICAL HIT")
-            return random.randint(1, self.attack_power) + self.crit - 40
+            return random.randint(1, self.attack_power) + self.crit
         else:
-            return random.randint(1, self.attack_power - 20)
+            return random.randint(1, self.attack_power)
 
         
     def take_damage(self, damage):

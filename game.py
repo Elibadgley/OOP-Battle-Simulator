@@ -1,3 +1,4 @@
+from enemy import Enemy
 from goblin import Goblin
 from hero import Hero
 from heroClasses import Warrior, Rogue, Ranger
